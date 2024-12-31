@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image en Grand</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Retour à la Lettre</a>
+        </nav>
+        <h1>Image en Grand</h1>
+    </header>
+
+    <main>
+        <section id="image-section" class="centered">
+            <img id="image-display" src="" alt="Image en Grand">
+            <p id="image-comment"></p>
+        </section>
+    </main>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const imageUrl = params.get('image');
+        const comment = params.get('comment');
+
+        document.getElementById('image-display').src = imageUrl;
+        document.getElementById('image-comment').textContent = comment || "Pas de commentaire disponible.";
+    </script>
+</body>
+</html>

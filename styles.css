@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #cceeff, #ffffff);
+    color: #333;
+}
+
+header {
+    text-align: center;
+    background: #80deea;
+    padding: 20px;
+    color: white;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.centered {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.snowballs {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.snowball {
+    position: absolute;
+    top: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fall 6s linear infinite;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.snowball img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+#snowflakes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.snowflake {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, white 70%, transparent);
+    border-radius: 50%;
+    animation: snowfall 7s linear infinite;
+}
+
+@keyframes snowfall {
+    from {
+        transform: translateY(-100px) scale(1);
+    }
+    to {
+        transform: translateY(100vh) scale(0.8);
+    }
+}
+
+/* Texte centré pour le quiz */
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quiz-options button {
+    margin: 10px 0;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quiz-options button:hover {
+    background-color: #005fa3;
+}
